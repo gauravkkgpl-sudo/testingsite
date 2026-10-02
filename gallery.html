@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Contribution Gallery — Divya Light</title>
+<meta name="description" content="Explore our contribution gallery featuring donated items, meals, and community support.">
 <link rel="icon" type="image/png" href="fav.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,150 +18,106 @@
     <a href="index.html" class="logo"><img src="logod.png" alt="Divya Light Logo"></a>
     <div class="nav-links">
       <a href="index.html">Home</a>
-      <a href="mission.html">Our Mission</a>
-      <a href="humanity.html">Humanity</a>
-      <a href="earth.html">Mother Earth</a>
-      <a href="gallery.html" class="nav-highlight active-page">Contribution Gallery <span class="pulse-dot"></span></a>
-      <a href="stories.html">Stories</a>
-      <a href="suggestions.html">Suggestions</a>
-      <button class="help-btn" onclick="openModal()"><i class="fa-solid fa-bowl-food"></i> Help to Feed</button>
+      <a href="index.html#mission">Our Mission</a>
+      <a href="index.html#humanity">Humanity</a>
+      <a href="index.html#earth">Mother Earth</a>
+      <a href="contribution-gallery.html" style="color: var(--sage); font-weight:700;">Gallery</a>
+      <a href="index.html#stories">Stories</a>
+      <button class="help-btn" onclick="openModal()">Help to Feed</button>
     </div>
-    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
   <div class="mobile-menu" id="mobileMenu">
     <a href="index.html">Home</a>
-    <a href="gallery.html" style="color:var(--accent);font-weight:700;">✨ Contribution Gallery</a>
+    <a href="index.html#mission">Our Mission</a>
+    <a href="index.html#humanity">Humanity</a>
+    <a href="index.html#earth">Mother Earth</a>
+    <a href="contribution-gallery.html">Contribution Gallery</a>
+    <a href="index.html#stories">Stories</a>
     <button class="help-btn" style="margin-top:14px;width:100%" onclick="openModal()">Help to Feed</button>
   </div>
 </header>
 
-<section class="page-hero">
+<!-- PAGE HEADER -->
+<section class="gallery-hero" style="padding: 60px 0 30px; background: var(--paper); text-align: center;">
   <div class="wrap">
-    <span class="eyebrow" style="color:var(--accent)"><i class="fa-solid fa-award"></i> Transparency & Gratitude</span>
-    <h1>Contribution Gallery</h1>
-    <p>Celebrating our generous contributors and tracking direct humanitarian impact through food and aid distributions.</p>
+    <span class="eyebrow">✨ Contribution Gallery</span>
+    <h1 style="font-size: clamp(2.2rem, 4vw, 3.2rem); color: var(--sage-dark);">Moments of Care & Generosity</h1>
+    <p style="max-width: 600px; margin: 15px auto 0;">Explore visual glimpses of our community efforts, donated meals, and support extended to people in need.</p>
   </div>
 </section>
 
-<!-- SECTION 1: CONTRIBUTORS (8 Images: con.png to con7.png) -->
-<section style="background:var(--surface)">
+<!-- SECTION 1: IMAGES OF DONATIONS & MEALS -->
+<section style="padding: 60px 0;">
   <div class="wrap">
-    <div class="section-head" style="margin-bottom:40px">
-      <span class="eyebrow">Section 01</span>
-      <h2>Our Valued Contributors</h2>
-      <p style="margin-top:10px">Honoring kind hearts who back our grassroots community drives.</p>
+    <div class="section-head" style="margin-bottom: 36px;">
+      <span class="eyebrow">📸 Section 1</span>
+      <h2>Donations & Humanitarian Activities</h2>
+      <p style="margin-top:10px">Glimpses of food distribution drives, essential item distributions, and community outreach.</p>
     </div>
     
-    <div class="grid contrib-grid-8">
-      
-      <!-- con.png -->
-      <div class="card fade-up contrib-card-item">
-        <div class="contrib-img-wrap"><img src="con.png" alt="Contributor 1"></div>
-        <div class="contributor-badge">⭐ Gold Supporter</div>
-        <h3 style="margin-top:12px;font-size:1.1rem">Community Donor</h3>
-        <p class="contrib-date">Verified Contribution</p>
-        <p style="margin-top:8px;font-size:0.9rem">"Dedicated toward weekly meal distribution for children."</p>
+    <div class="grid gallery-grid">
+      <div class="card card-click fade-up" style="padding: 0; overflow: hidden;">
+        <div style="height: 220px; background: #e8f0ec; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+          <img src="img.png" alt="Donation Drive" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div style="padding: 24px;">
+          <h3>Meal Distribution Drive</h3>
+          <p style="font-size: 0.9rem; margin-top: 6px;">Fresh, warm meals prepared and distributed to people in need across the city.</p>
+        </div>
       </div>
 
-      <!-- con1.png -->
-      <div class="card fade-up contrib-card-item">
-        <div class="contrib-img-wrap"><img src="con1.png" alt="Contributor 2"></div>
-        <div class="contributor-badge" style="background:rgba(229,169,59,0.15);color:#B7791F">🌿 Kind Soul</div>
-        <h3 style="margin-top:12px;font-size:1.1rem">Anonymous Angel</h3>
-        <p class="contrib-date">Verified Contribution</p>
-        <p style="margin-top:8px;font-size:0.9rem">"Supporting animal welfare and stray feeding kits."</p>
+      <div class="card card-click fade-up" style="padding: 0; overflow: hidden;">
+        <div style="height: 220px; background: #e8f0ec; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+          <img src="img2.png" alt="Essential Support" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div style="padding: 24px;">
+          <h3>Community Support Initiatives</h3>
+          <p style="font-size: 0.9rem; margin-top: 6px;">Providing daily essentials and care packages to vulnerable individuals and families.</p>
+        </div>
       </div>
 
-      <!-- con2.png -->
-      <div class="card fade-up contrib-card-item">
-        <div class="contrib-img-wrap"><img src="con2.png" alt="Contributor 3"></div>
-        <div class="contributor-badge">✨ Community Angel</div>
-        <h3 style="margin-top:12px;font-size:1.1rem">Supporter Slot</h3>
-        <p class="contrib-date">Verified Contribution</p>
-        <p style="margin-top:8px;font-size:0.9rem">"Contributed towards blanket and winter clothing kits."</p>
+      <div class="card card-click fade-up" style="padding: 0; overflow: hidden;">
+        <div style="height: 220px; background: #e8f0ec; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+          <img src="img3.png" alt="Animal Care & Earth" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div style="padding: 24px;">
+          <h3>Animal Care & Earth Drives</h3>
+          <p style="font-size: 0.9rem; margin-top: 6px;">Feeding stray animals and participating in green environmental care initiatives.</p>
+        </div>
       </div>
-
-      <!-- con3.png -->
-      <div class="card fade-up contrib-card-item">
-        <div class="contrib-img-wrap"><img src="con3.png" alt="Contributor 4"></div>
-        <div class="contributor-badge">🌟 Patron</div>
-        <h3 style="margin-top:12px;font-size:1.1rem">Kind Citizen</h3>
-        <p class="contrib-date">Verified Contribution</p>
-        <p style="margin-top:8px;font-size:0.9rem">"Empowering public space cleanliness and tree plantation."</p>
-      </div>
-
-      <!-- con4.png -->
-      <div class="card fade-up contrib-card-item">
-        <div class="contrib-img-wrap"><img src="con4.png" alt="Contributor 5"></div>
-        <div class="contributor-badge">⭐ Supporter</div>
-        <h3 style="margin-top:12px;font-size:1.1rem">Humanity Ally</h3>
-        <p class="contrib-date">Verified Contribution</p>
-        <p style="margin-top:8px;font-size:0.9rem">"General humanitarian fund contribution."</p>
-      </div>
-
-      <!-- con5.png -->
-      <div class="card fade-up contrib-card-item">
-        <div class="contrib-img-wrap"><img src="con5.png" alt="Contributor 6"></div>
-        <div class="contributor-badge" style="background:rgba(229,169,59,0.15);color:#B7791F">🌿 Kind Soul</div>
-        <h3 style="margin-top:12px;font-size:1.1rem">Anonymous Donor</h3>
-        <p class="contrib-date">Verified Contribution</p>
-        <p style="margin-top:8px;font-size:0.9rem">"Supporting emergency medical aid items."</p>
-      </div>
-
-      <!-- con6.png -->
-      <div class="card fade-up contrib-card-item">
-        <div class="contrib-img-wrap"><img src="con6.png" alt="Contributor 7"></div>
-        <div class="contributor-badge">✨ Community Angel</div>
-        <h3 style="margin-top:12px;font-size:1.1rem">Benefactor</h3>
-        <p class="contrib-date">Verified Contribution</p>
-        <p style="margin-top:8px;font-size:0.9rem">"Providing hydration stations during peak summer."</p>
-      </div>
-
-      <!-- con7.png -->
-      <div class="card fade-up contrib-card-item">
-        <div class="contrib-img-wrap"><img src="con7.png" alt="Contributor 8"></div>
-        <div class="contributor-badge">🌟 Patron</div>
-        <h3 style="margin-top:12px;font-size:1.1rem">Philanthropist</h3>
-        <p class="contrib-date">Verified Contribution</p>
-        <p style="margin-top:8px;font-size:0.9rem">"Supporting monthly ration kits for elders."</p>
-      </div>
-
     </div>
   </div>
 </section>
 
-<!-- SECTION 2: DONATIONS TO NEEDY PEOPLE -->
-<section>
+<!-- SECTION 2: DONATIONS TO NEEDY PEOPLE & COMMUNITY SUPPORT -->
+<section class="alt-bg" style="padding: 60px 0;">
   <div class="wrap">
-    <div class="section-head" style="margin-bottom:40px">
-      <span class="eyebrow">Section 02</span>
-      <h2>Donations & Aid to Needy People</h2>
-      <p style="margin-top:10px">Transparent ground reports of where resources are deployed.</p>
+    <div class="section-head" style="margin-bottom: 36px;">
+      <span class="eyebrow">💚 Section 2</span>
+      <h2>Support Provided to Needy People</h2>
+      <p style="margin-top:10px">Heartfelt moments reflecting direct assistance, smiles, and collective community contributions.</p>
     </div>
 
-    <div class="grid">
-      <div class="impact-card fade-up">
-        <div class="impact-tag"><i class="fa-solid fa-utensils"></i> Food Drive</div>
-        <h3>Warm Meal Distribution</h3>
-        <p class="contrib-date">Dehradun City Area • Active Weekly</p>
-        <p style="margin-top:12px;">Fresh, hygienic cooked meals packed and distributed directly to daily-wage workers and night shelter residents.</p>
-        <div class="impact-stat"><span>Status:</span> <strong>Regularly Executed</strong></div>
+    <div class="grid gallery-grid">
+      <div class="card fade-up">
+        <div class="icon">🍲</div>
+        <h3>Nutritious Food Support</h3>
+        <p>Ensuring wholesome meals reach those who require them most through community contributions and volunteers.</p>
       </div>
 
-      <div class="impact-card fade-up">
-        <div class="impact-tag"><i class="fa-solid fa-box-open"></i> Essentials</div>
-        <h3>Basic Utility Kits</h3>
-        <p class="contrib-date">Community Outreach</p>
-        <p style="margin-top:12px;">Provision of dry rations, clean drinking water bottles, and emergency footwear during seasonal shifts.</p>
-        <div class="impact-stat"><span>Status:</span> <strong>Ongoing Drives</strong></div>
+      <div class="card fade-up">
+        <div class="icon">🧥</div>
+        <h3>Seasonal & Essential Aid</h3>
+        <p>Distributing warm clothing, blankets, and essentials during challenging weather conditions.</p>
       </div>
 
-      <div class="impact-card fade-up">
-        <div class="impact-tag"><i class="fa-solid fa-shirt"></i> Winter Care</div>
-        <h3>Warm Clothing & Blankets</h3>
-        <p class="contrib-date">Seasonal Initiative</p>
-        <p style="margin-top:12px;">Distributing heavy wool blankets and warm jackets to homeless individuals before cold snaps.</p>
-        <div class="impact-stat"><span>Status:</span> <strong>Preparedness Ready</strong></div>
+      <div class="card fade-up">
+        <div class="icon">🤝</div>
+        <h3>Kindness in Action</h3>
+        <p>Every contribution directly transforms into smiles, comfort, and relief for underprivileged individuals.</p>
       </div>
     </div>
   </div>
@@ -171,40 +127,33 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <div class="logo"><img src="logod1.png" alt="Logo"></div>
+        <div class="logo"><img src="logod1.png" alt="Divya Light Logo"></div>
         <p>A community humanitarian initiative — giving time, kindness and care to people, animals and the earth.</p>
       </div>
-      <div class="flinks">
-        <h4>Explore Pages</h4>
-        <a href="index.html">Home</a>
-        <a href="mission.html">Our Mission</a>
-        <a href="humanity.html">Humanity Actions</a>
-        <a href="earth.html">Mother Earth</a>
-      </div>
-      <div class="flinks">
-        <h4>Quick Links</h4>
-        <a href="gallery.html" style="color:var(--accent);font-weight:600;"><i class="fa-solid fa-images"></i> Contribution Gallery</a>
-        <a href="stories.html">Stories & Community</a>
-        <a href="suggestions.html">Suggestions & Form</a>
-        <a href="#" onclick="openModal();return false;">Help to Feed</a>
-      </div>
+      <div class="flinks"><h4>Explore</h4><a href="index.html#mission">Our Mission</a><a href="index.html#humanity">Humanity</a><a href="index.html#earth">Mother Earth</a><a href="index.html#stories">Stories</a></div>
+      <div class="flinks"><h4>Quick Links</h4><a href="contribution-gallery.html" style="color:var(--gold); font-weight:700;">✨ Contribution Gallery</a><a href="index.html#contribute">Contributions</a><a href="index.html#suggestions">Suggestions</a><a href="#" onclick="openModal();return false;">Help to Feed</a></div>
     </div>
-    <p class="foot-disclaimer">Divya Light is not a registered NGO, certified charity or non-profit organisation. Contributions are voluntary.</p>
+    <p class="foot-disclaimer">Divya Light is not a registered NGO, certified charity or non-profit organisation. Contributions are voluntary and support community humanitarian activities only.</p>
     <div class="foot-bottom"><span>© 2026 Divya Light. All Rights Reserved.</span></div>
   </div>
 </footer>
 
-<button class="floating-help" onclick="openModal()"><i class="fa-solid fa-bowl-food"></i><span class="label">Help to Feed</span></button>
-<button class="scroll-top" id="scrollTop"><i class="fa-solid fa-arrow-up"></i></button>
+<button class="floating-help" onclick="openModal()" aria-label="Help to Feed">
+  <span style="font-size: 1.2rem;">🍲</span>
+  <span class="label">Help to Feed</span>
+</button>
 
 <div class="modal-overlay" id="modalOverlay">
   <div class="modal">
-    <button class="modal-close" onclick="closeModal()">&times;</button>
-    <div class="qr-frame" style="width:200px;height:200px;margin:0 auto 20px;"><img src="QRjio.png" alt="QR"></div>
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
+    <div class="qr-frame">
+      <img src="QRjio.png" alt="Help to Feed QR Code">
+    </div>
     <h3>Help to Feed</h3>
-    <p>Scan to contribute.</p>
+    <p>Scan this code to contribute. Divya Light is not a registered NGO — see the Contributions section for full details.</p>
   </div>
 </div>
+
 <script src="script.js"></script>
 </body>
 </html>
