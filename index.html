@@ -8,13 +8,13 @@
 <link rel="icon" type="image/png" href="fav.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- PREMIUM HEADER -->
+<!-- HEADER -->
 <header>
   <nav class="nav">
     <a href="index.html" class="logo"><img src="logod.png" alt="Divya Light Logo"></a>
@@ -28,23 +28,21 @@
       <a href="suggestions.html">Suggestions</a>
       <button class="help-btn" onclick="openModal()"><i class="fa-solid fa-bowl-food"></i> Help to Feed</button>
     </div>
-    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
   </nav>
   <div class="mobile-menu" id="mobileMenu">
     <a href="index.html">Home</a>
     <a href="mission.html">Our Mission</a>
     <a href="humanity.html">Humanity</a>
     <a href="earth.html">Mother Earth</a>
-    <a href="gallery.html" style="color:var(--gold);font-weight:700;">✨ Contribution Gallery</a>
+    <a href="gallery.html" style="color:var(--accent);font-weight:700;">✨ Contribution Gallery</a>
     <a href="stories.html">Stories</a>
     <a href="suggestions.html">Suggestions</a>
     <button class="help-btn" style="margin-top:14px;width:100%" onclick="openModal()"><i class="fa-solid fa-bowl-food"></i> Help to Feed</button>
   </div>
 </header>
 
-<!-- MARQUEE TICKER -->
+<!-- TICKER -->
 <div class="marquee">
   <div class="marquee-track">
     <span>Small acts. Big difference.</span>
@@ -58,21 +56,20 @@
   </div>
 </div>
 
-<!-- HERO SECTION -->
+<!-- HERO SLIDER -->
 <section class="hero" id="home">
   <div class="hero-slider" id="heroSlider">
-
     <div class="hero-slide hero-slide-1 active">
       <img src="img.png" alt="Banner 1" class="banner-img desktop-banner">
       <img src="mob.png" alt="Banner 1 Mobile" class="banner-img mobile-banner">
       <div class="wrap hero-content">
-        <span class="eyebrow"><i class="fa-solid fa-sparkles"></i> A Community Humanitarian Initiative</span>
+        <span class="eyebrow"><i class="fa-solid fa-heart"></i> Community Humanitarian Initiative</span>
         <h1>Be Someone's Light in the Dark.</h1>
         <p>Humanity isn't only about giving money. It's giving your time, attention, and kindness — a small act today can change someone's world.</p>
         <div class="hero-actions">
-          <button class="cta-glow" onclick="openModal()"><i class="fa-solid fa-hand-holding-heart"></i> Help to Feed</button>
+          <button class="cta-glow" onclick="openModal()"><i class="fa-solid fa-bowl-food"></i> Help to Feed</button>
           <a href="gallery.html" class="cta-glow-pulse">✨ Contribution Gallery</a>
-          <a href="humanity.html" class="cta-outline">Explore Initiatives</a>
+          <a href="mission.html" class="cta-outline">Our Mission</a>
         </div>
       </div>
     </div>
@@ -81,11 +78,11 @@
       <img src="img2.png" alt="Banner 2" class="banner-img desktop-banner">
       <img src="mob1.png" alt="Banner 2 Mobile" class="banner-img mobile-banner">
       <div class="wrap hero-content">
-        <span class="eyebrow"><i class="fa-solid fa-heart-pulse"></i> Humanity First</span>
+        <span class="eyebrow"><i class="fa-solid fa-hands-holding-child"></i> Humanity First</span>
         <h1>Kindness Needs No Wallet.</h1>
         <p>Listening, visiting, or helping someone carry their daily burden matters just as much as any financial donation.</p>
         <div class="hero-actions">
-          <a href="humanity.html" class="cta-glow" style="display:inline-block">Discover Humanity Actions</a>
+          <a href="humanity.html" class="cta-glow" style="display:inline-block">Explore Humanity Actions</a>
         </div>
       </div>
     </div>
@@ -109,51 +106,85 @@
       <div class="wrap hero-content">
         <span class="eyebrow"><i class="fa-solid fa-utensils"></i> Nourish Lives</span>
         <h1>One Meal Can Change a Day.</h1>
-        <p>A shared plate of food is the most direct act of care. Support our meal initiatives with transparency.</p>
+        <p>A shared plate of food is the most direct act of care. Support our meal initiatives with complete transparency.</p>
         <div class="hero-actions">
           <button class="cta-glow" onclick="openModal()"><i class="fa-solid fa-bowl-food"></i> Help to Feed Now</button>
         </div>
       </div>
     </div>
 
-    <button class="slider-arrow prev" onclick="changeSlide(-1)" aria-label="Previous banner"><i class="fa-solid fa-chevron-left"></i></button>
-    <button class="slider-arrow next" onclick="changeSlide(1)" aria-label="Next banner"><i class="fa-solid fa-chevron-right"></i></button>
+    <button class="slider-arrow prev" onclick="changeSlide(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+    <button class="slider-arrow next" onclick="changeSlide(1)"><i class="fa-solid fa-chevron-right"></i></button>
     <div class="slider-dots" id="sliderDots">
-      <button class="active" onclick="goToSlide(0)" aria-label="Banner 1"></button>
-      <button onclick="goToSlide(1)" aria-label="Banner 2"></button>
-      <button onclick="goToSlide(2)" aria-label="Banner 3"></button>
-      <button onclick="goToSlide(3)" aria-label="Banner 4"></button>
+      <button class="active" onclick="goToSlide(0)"></button>
+      <button onclick="goToSlide(1)"></button>
+      <button onclick="goToSlide(2)"></button>
+      <button onclick="goToSlide(3)"></button>
     </div>
   </div>
 </section>
 
-<!-- HIGHLIGHT OVERVIEW CARDS -->
-<section style="background:var(--paper)">
-  <div class="wrap">
-    <div class="section-head text-center mx-auto" style="text-align:center;margin-left:auto;margin-right:auto">
-      <span class="eyebrow">Our Core Pillars</span>
-      <h2>How We Make a Difference Together</h2>
-      <p style="margin-top:12px">Explore our specialized detailed sections dedicated to humanitarian values.</p>
+<!-- HOME SECTION: MISSION -->
+<section style="background:var(--surface)">
+  <div class="wrap split">
+    <div class="fade-up">
+      <span class="eyebrow"><i class="fa-solid fa-compass"></i> Our Core Vision</span>
+      <h2>Kindness as a way of living, not an occasional act.</h2>
+      <p style="margin-top:18px">Divya Light began as a simple belief: that everyone has something to give, whether it's an hour of time, a warm meal, a kind word, or the will to clean up a small corner of the world.</p>
+      <div style="margin-top:28px"><a href="mission.html" class="cta-glow" style="padding:14px 28px;font-size:0.9rem;">Read Full Mission &rarr;</a></div>
     </div>
-    <div class="grid" style="margin-top:40px">
-      <a href="mission.html" class="card fade-up" style="display:block">
-        <div class="icon"><i class="fa-solid fa-bullseye"></i></div>
-        <h3>Our Mission</h3>
-        <p>Kindness as a daily way of living. Learn about our founding vision and grassroot values.</p>
-        <span class="card-more">Read full mission &rarr;</span>
-      </a>
-      <a href="humanity.html" class="card fade-up" style="display:block">
-        <div class="icon"><i class="fa-solid fa-hands-holding-child"></i></div>
-        <h3>Humanity Initiatives</h3>
-        <p>6 practical ways to help people, support elders, and care for stray animals without cost.</p>
-        <span class="card-more">Explore humanity guides &rarr;</span>
-      </a>
-      <a href="earth.html" class="card fade-up" style="display:block">
-        <div class="icon"><i class="fa-solid fa-earth-americas"></i></div>
-        <h3>Mother Earth</h3>
-        <p>Actionable steps for waste reduction, tree planting, and cleaning public spaces.</p>
-        <span class="card-more">View earth actions &rarr;</span>
-      </a>
+    <div class="fade-up"><img src="img5.png" alt="Mission" class="mission-img"></div>
+  </div>
+</section>
+
+<!-- HOME SECTION: HUMANITY HIGHLIGHTS -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow"><i class="fa-solid fa-hands-holding-child"></i> Humanity Actions</span>
+      <h2>Countless ways to help — money is only one.</h2>
+    </div>
+    <div class="grid">
+      <div class="card fade-up">
+        <div class="icon"><i class="fa-solid fa-user-clock"></i></div>
+        <h3>Spend time with someone lonely</h3>
+        <p>A visit, phone call, or sitting with someone can lift their whole week.</p>
+        <a href="humanity.html" class="card-more">Learn more &rarr;</a>
+      </div>
+      <div class="card fade-up">
+        <div class="icon"><i class="fa-solid fa-ear-listen"></i></div>
+        <h3>Listen, without rushing to fix</h3>
+        <p>Sometimes the most helpful thing is to truly hear someone out without judgment.</p>
+        <a href="humanity.html" class="card-more">Learn more &rarr;</a>
+      </div>
+      <div class="card fade-up">
+        <div class="icon"><i class="fa-solid fa-people-carry-box"></i></div>
+        <h3>Support workers in difficulty</h3>
+        <p>Fair wages, water on hot days, and basic respect for daily wage workers.</p>
+        <a href="humanity.html" class="card-more">Learn more &rarr;</a>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:40px;"><a href="humanity.html" class="cta-glow-pulse" style="color:var(--primary);border-color:var(--primary);">View All 6 Humanity Guides &rarr;</a></div>
+  </div>
+</section>
+
+<!-- CONTRIBUTION SECTION -->
+<section class="alt-bg">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow"><i class="fa-solid fa-award"></i> Contributions</span>
+      <h2>If you'd like to contribute financially, here's how.</h2>
+    </div>
+    <div class="contrib-box">
+      <div class="qr-frame"><img src="QRjio.png" alt="QR Code"></div>
+      <div>
+        <h3 style="font-size:1.4rem;margin-bottom:12px">Scan to contribute directly</h3>
+        <p>Every contribution goes directly toward humanitarian activities — sharing meals, supporting people in difficulty, and small community initiatives.</p>
+        <div style="margin-top:24px;display:flex;gap:16px;flex-wrap:wrap;">
+          <button class="cta-glow" onclick="openModal()"><i class="fa-solid fa-bowl-food"></i> Help to Feed</button>
+          <a href="gallery.html" class="cta-glow-pulse" style="color:var(--text-main);border-color:var(--accent);">✨ View Contribution Gallery</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -163,7 +194,7 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <div class="logo"><img src="logod1.png" alt="Divya Light Logo"></div>
+        <div class="logo"><img src="logod1.png" alt="Logo"></div>
         <p>A community humanitarian initiative — giving time, kindness and care to people, animals and the earth.</p>
       </div>
       <div class="flinks">
@@ -175,38 +206,28 @@
       </div>
       <div class="flinks">
         <h4>Quick Links</h4>
-        <a href="gallery.html" style="color:var(--gold);font-weight:600;"><i class="fa-solid fa-images"></i> Contribution Gallery</a>
+        <a href="gallery.html" style="color:var(--accent);font-weight:600;"><i class="fa-solid fa-images"></i> Contribution Gallery</a>
         <a href="stories.html">Stories & Community</a>
         <a href="suggestions.html">Suggestions & Form</a>
         <a href="#" onclick="openModal();return false;">Help to Feed</a>
       </div>
     </div>
-    <p class="foot-disclaimer">Divya Light is not a registered NGO, certified charity or non-profit organisation. Contributions are voluntary and support community humanitarian activities only; no tax benefit or 80G deduction is offered.</p>
+    <p class="foot-disclaimer">Divya Light is not a registered NGO, certified charity or non-profit organisation. Contributions are voluntary and support community humanitarian activities only.</p>
     <div class="foot-bottom"><span>© 2026 Divya Light. All Rights Reserved.</span></div>
   </div>
 </footer>
 
-<!-- FLOATING HELP & SCROLL TOP -->
-<button class="floating-help" onclick="openModal()" aria-label="Help to Feed">
-  <i class="fa-solid fa-bowl-food"></i>
-  <span class="label">Help to Feed</span>
-</button>
-<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
-  <i class="fa-solid fa-arrow-up"></i>
-</button>
+<button class="floating-help" onclick="openModal()"><i class="fa-solid fa-bowl-food"></i><span class="label">Help to Feed</span></button>
+<button class="scroll-top" id="scrollTop"><i class="fa-solid fa-arrow-up"></i></button>
 
-<!-- MODAL -->
 <div class="modal-overlay" id="modalOverlay">
   <div class="modal">
-    <button class="modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
-    <div class="qr-frame">
-      <img src="QRjio.png" alt="Help to Feed QR Code">
-    </div>
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+    <div class="qr-frame" style="width:200px;height:200px;margin:0 auto 20px;"><img src="QRjio.png" alt="QR"></div>
     <h3>Help to Feed</h3>
-    <p>Scan this code to contribute. Divya Light is not a registered NGO — check Contributions section for details.</p>
+    <p>Scan this code to contribute. Divya Light is not a registered NGO.</p>
   </div>
 </div>
-
 <script src="script.js"></script>
 </body>
 </html>
