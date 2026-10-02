@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Divya Light — Be Someone's Light</title>
+<meta name="description" content="Divya Light is a community humanitarian initiative — giving time, kindness, and care to people, animals and the earth.">
+<link rel="icon" type="image/png" href="fav.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <nav class="nav">
+    <a href="index.html" class="logo"><img src="logod.png" alt="Divya Light Logo"></a>
+    <div class="nav-links">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#mission">Our Mission</a>
+      <a href="index.html#humanity">Humanity</a>
+      <a href="index.html#earth">Mother Earth</a>
+      <a href="index.html#contribute">Contributions</a>
+      <a href="gallery.html" class="nav-highlight">Contribution Gallery <span class="pulse-dot"></span></a>
+      <a href="index.html#stories">Stories</a>
+      <a href="index.html#suggestions">Suggestions</a>
+      <button class="help-btn" onclick="openModal()">Help to Feed</button>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#home">Home</a>
+    <a href="index.html#mission">Our Mission</a>
+    <a href="index.html#humanity">Humanity</a>
+    <a href="index.html#earth">Mother Earth</a>
+    <a href="index.html#contribute">Contributions</a>
+    <a href="gallery.html" style="color:var(--gold);font-weight:700;">✨ Contribution Gallery</a>
+    <a href="index.html#stories">Stories</a>
+    <a href="index.html#suggestions">Suggestions</a>
+    <button class="help-btn" style="margin-top:14px;width:100%" onclick="openModal()">Help to Feed</button>
+  </div>
+</header>
+
+<!-- TICKER / MARQUEE -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Small acts. Big difference.</span>
+    <span>Humanity begins with us.</span>
+    <span>You don't need to be rich to help someone.</span>
+    <span>Do something today for humanity.</span>
+    <span>Small acts. Big difference.</span>
+    <span>Humanity begins with us.</span>
+    <span>You don't need to be rich to help someone.</span>
+    <span>Do something today for humanity.</span>
+  </div>
+</div>
+
+<!-- HERO SLIDER -->
+<section class="hero" id="home">
+  <div class="hero-slider" id="heroSlider">
+
+    <div class="hero-slide hero-slide-1 active">
+      <img src="img.png" alt="Banner 1" class="banner-img desktop-banner">
+      <img src="mob.png" alt="Banner 1 Mobile" class="banner-img mobile-banner">
+      <div class="wrap hero-content">
+        <span class="eyebrow">A community humanitarian initiative</span>
+        <h1>Be Someone's Light.</h1>
+        <p>Humanity isn't only about giving money. It's giving your time, your attention, your kindness — a small act, done today, can change someone's whole day.</p>
+        <div class="hero-actions">
+          <button class="cta-glow" onclick="openModal()">Help to Feed</button>
+          <a href="gallery.html" class="cta-glow-pulse">✨ Contribution Gallery</a>
+          <a href="#humanity" class="cta-outline">See how you can help</a>
+        </div>
+      </div>
+      <svg class="hero-art" viewBox="0 0 200 200" fill="none" stroke="#fff" stroke-width="1.2" opacity=".55"><path d="M100 170c-30-16-64-46-64-84a36 36 0 0 1 64-22 36 36 0 0 1 64 22c0 38-34 68-64 84Z"/><circle cx="100" cy="70" r="10" fill="#F3E3C5" stroke="none"/></svg>
+    </div>
+
+    <div class="hero-slide hero-slide-2">
+      <img src="img2.png" alt="Banner 2" class="banner-img desktop-banner">
+      <img src="mob1.png" alt="Banner 2 Mobile" class="banner-img mobile-banner">
+      <div class="wrap hero-content">
+        <span class="eyebrow">Humanity</span>
+        <h1>Kindness needs no wallet.</h1>
+        <p>Listening, visiting, helping someone carry their burden — the ways we show up for each other matter as much as anything we give.</p>
+        <div class="hero-actions">
+          <a href="#humanity" class="cta-glow" style="display:inline-block">Explore ways to help</a>
+        </div>
+      </div>
+      <svg class="hero-art" viewBox="0 0 200 200" fill="none" stroke="#fff" stroke-width="1.2" opacity=".55"><circle cx="72" cy="70" r="22"/><circle cx="128" cy="70" r="22"/><path d="M40 160c6-30 24-44 60-44s54 14 60 44"/></svg>
+    </div>
+
+    <div class="hero-slide hero-slide-3">
+      <img src="img3.png" alt="Banner 3" class="banner-img desktop-banner">
+      <img src="mob2.png" alt="Banner 3 Mobile" class="banner-img mobile-banner">
+      <div class="wrap hero-content">
+        <span class="eyebrow">Mother Earth</span>
+        <h1>Protect the ground we share.</h1>
+        <p>Planting a tree, clearing litter, cutting back on plastic — the earth heals through thousands of small, steady habits.</p>
+        <div class="hero-actions">
+          <a href="#earth" class="cta-glow" style="display:inline-block">See how to help</a>
+        </div>
+      </div>
+      <svg class="hero-art" viewBox="0 0 200 200" fill="none" stroke="#fff" stroke-width="1.2" opacity=".55"><path d="M100 176V96M100 96c-26 0-42-18-42-46 20 0 40 12 42 34 2-22 22-34 42-34 0 28-16 46-42 46Z"/></svg>
+    </div>
+
+    <div class="hero-slide hero-slide-4">
+      <img src="img4.png" alt="Banner 4" class="banner-img desktop-banner">
+      <img src="mob3.png" alt="Banner 4 Mobile" class="banner-img mobile-banner">
+      <div class="wrap hero-content">
+        <span class="eyebrow">Help to Feed</span>
+        <h1>One meal can change a day.</h1>
+        <p>A shared plate of food can be the simplest, most direct act of care — support our meal initiatives with a small contribution.</p>
+        <div class="hero-actions">
+          <button class="cta-glow" onclick="openModal()">Help to Feed</button>
+        </div>
+      </div>
+      <svg class="hero-art" viewBox="0 0 200 200" fill="none" stroke="#fff" stroke-width="1.2" opacity=".55"><path d="M50 100a50 50 0 0 0 100 0Z"/><path d="M50 100h100M100 50v20"/></svg>
+    </div>
+
+    <button class="slider-arrow prev" onclick="changeSlide(-1)" aria-label="Previous banner">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M15 19l-7-7 7-7"/></svg>
+    </button>
+    <button class="slider-arrow next" onclick="changeSlide(1)" aria-label="Next banner">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg>
+    </button>
+    <div class="slider-dots" id="sliderDots">
+      <button class="active" onclick="goToSlide(0)" aria-label="Banner 1"></button>
+      <button onclick="goToSlide(1)" aria-label="Banner 2"></button>
+      <button onclick="goToSlide(2)" aria-label="Banner 3"></button>
+      <button onclick="goToSlide(3)" aria-label="Banner 4"></button>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION -->
+<section id="mission" class="alt-bg">
+  <div class="wrap split">
+    <div class="fade-up">
+      <span class="eyebrow">Our Mission</span>
+      <h2>Kindness as a way of living, not an occasional act.</h2>
+      <p style="margin-top:18px">Divya Light began as a simple belief: that everyone has something to give, whether it's an hour of time, a warm meal, a kind word, or the will to clean up a small corner of the world. We exist to make it easy and honest for people to act on that belief — together, at a human scale, without needing to be an institution to make a difference.</p>
+    </div>
+    <div class="fade-up">
+      <img src="img5.png" alt="Our Mission" class="mission-img">
+    </div>
+  </div>
+</section>
+
+<!-- HUMANITY -->
+<section id="humanity">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Humanity</span>
+      <h2>There are countless ways to help — money is only one.</h2>
+      <p style="margin-top:14px">Real humanitarian work happens in ordinary moments. Here are a few ways anyone can take part, starting today.</p>
+    </div>
+    <div class="grid">
+      <div class="card card-click fade-up" tabindex="0" role="button" onclick="openDetail(0)" onkeydown="if(event.key==='Enter')openDetail(0)"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E3F27" stroke-width="1.6"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c1.5-4 4-6 7-6s5.5 2 7 6"/></svg></div><h3>Spend time with someone lonely</h3><p>A visit, a phone call, or simply sitting with someone can mean more than any gift.</p><span class="card-more">Learn more</span></div>
+      <div class="card card-click fade-up" tabindex="0" role="button" onclick="openDetail(1)" onkeydown="if(event.key==='Enter')openDetail(1)"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E3F27" stroke-width="1.6"><path d="M8 10c0-2.5 2-4 4-4s4 1.5 4 4c0 3-4 4-4 7"/><circle cx="12" cy="20" r="0.6" fill="#1E3F27"/></svg></div><h3>Listen, without rushing to fix</h3><p>Sometimes the most helpful thing is to truly hear someone out.</p><span class="card-more">Learn more</span></div>
+      <div class="card card-click fade-up" tabindex="0" role="button" onclick="openDetail(2)" onkeydown="if(event.key==='Enter')openDetail(2)"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E3F27" stroke-width="1.6"><path d="M4 12h16M4 12l4-4M4 12l4 4"/></svg></div><h3>Help an elderly person</h3><p>Carrying groceries, running an errand, or checking in regularly.</p><span class="card-more">Learn more</span></div>
+      <div class="card card-click fade-up" tabindex="0" role="button" onclick="openDetail(3)" onkeydown="if(event.key==='Enter')openDetail(3)"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E3F27" stroke-width="1.6"><path d="M3 12h18M12 3v18"/></svg></div><h3>Support workers in difficulty</h3><p>A fair word, a fair wage, or simply noticing someone's struggle.</p><span class="card-more">Learn more</span></div>
+      <div class="card card-click fade-up" tabindex="0" role="button" onclick="openDetail(4)" onkeydown="if(event.key==='Enter')openDetail(4)"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E3F27" stroke-width="1.6"><path d="M12 21c-4-2-8-6-8-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 5-4 9-8 11Z"/></svg></div><h3>Care for animals</h3><p>Feeding strays, fostering, or simply treating animals with gentleness.</p><span class="card-more">Learn more</span></div>
+      <div class="card card-click fade-up" tabindex="0" role="button" onclick="openDetail(5)" onkeydown="if(event.key==='Enter')openDetail(5)"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E3F27" stroke-width="1.6"><path d="M4 20h16M6 20V10l6-6 6 6v10"/></svg></div><h3>Solve a practical problem</h3><p>Fixing something broken, sharing a skill, or offering to help sort a task out.</p><span class="card-more">Learn more</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- MOTHER EARTH -->
+<section id="earth" class="alt-bg">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Mother Earth</span>
+      <h2>Small habits, kept up together, protect the planet.</h2>
+      <p style="margin-top:14px">Caring for humanity includes caring for the ground beneath us. Here's where to begin.</p>
+    </div>
+    <div class="grid">
+      <div class="card fade-up"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E3F27" stroke-width="1.6"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div><h3>Clean a public space</h3><p>Even ten minutes clearing litter from a park or street adds up.</p></div>
+      <div class="card fade-up"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E3F27" stroke-width="1.6"><path d="M12 22V10M12 10C8 10 6 7 6 4c3 0 6 2 6 6Zm0 0c0-4 3-6 6-6 0 3-2 6-6 6Z"/></svg></div><h3>Plant and care for trees</h3><p>Plant one, or simply water and protect the ones already growing.</p></div>
+      <div class="card fade-up"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E3F27" stroke-width="1.6"><path d="M6 7h12M9 7V4h6v3M8 7l1 13h6l1-13"/></svg></div><h3>Reduce waste</h3><p>Reuse, compost, and think twice before something goes in the bin.</p></div>
+      <div class="card fade-up"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E3F27" stroke-width="1.6"><path d="M4 8h16v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V8ZM9 8V6a3 3 0 0 1 6 0v2"/></svg></div><h3>Avoid unnecessary plastic</h3><p>Carry your own bag or bottle — a habit that compounds over years.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTRIBUTIONS -->
+<section id="contribute">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Contributions</span>
+      <h2>If you'd like to contribute financially, here's how.</h2>
+    </div>
+    <div class="contrib-box">
+      <div class="qr-frame" aria-label="Contribution QR code">
+        <img src="QRjio.png" alt="Contribution QR Code">
+      </div>
+      <div>
+        <h3 style="font-size:1.3rem;margin-bottom:10px">Scan to contribute</h3>
+        <p>Every contribution goes directly toward humanitarian activities — sharing meals, supporting people in difficulty, and small community initiatives. There is no minimum, and no pressure. If you'd rather help in another way, the Humanity and Mother Earth sections above are just as valuable.</p>
+        <div style="margin-top:20px;">
+          <a href="gallery.html" class="cta-glow-pulse" style="display:inline-block;padding:12px 24px;font-size:0.9rem;">View Contribution Gallery &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      Divya Light is not a registered NGO, certified charity or non-profit organisation. We are currently two individuals working at a humanitarian level through our own initiative. Contributions are voluntary and are intended to support humanitarian activities and community initiatives. We do not provide or promise any tax benefit or 80G deduction for contributions.
+    </div>
+
+    <div class="transparency">
+      <div class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8B6F52" stroke-width="1.8"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+      <p>We keep a clear record of contributions received and how they are spent on activities. Initiative funds are not intentionally used for personal expenses. If you can't contribute financially, your time, skills and kindness matter just as much — see the Humanity section for ideas.</p>
+    </div>
+  </div>
+</section>
+
+<!-- STORIES -->
+<section id="stories" class="alt-bg">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Stories</span>
+      <h2>A growing collection of everyday humanity.</h2>
+      <p style="margin-top:14px">This space will fill with real stories from people like you. Share yours in Suggestions below.</p>
+    </div>
+    <div class="grid">
+      <div class="story-card fade-up"><div><span class="quote-mark">"</span><p>Your story could be here. Every kind act deserves to be remembered.</p></div><div class="who">— Waiting for you</div></div>
+      <div class="story-card fade-up"><div><span class="quote-mark">"</span><p>A community grows one shared story at a time.</p></div><div class="who">— Waiting for you</div></div>
+      <div class="story-card fade-up"><div><span class="quote-mark">"</span><p>Tell us who you helped, and how. It might inspire someone else.</p></div><div class="who">— Waiting for you</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SUGGESTIONS -->
+<section id="suggestions">
+  <div class="wrap">
+    <div class="suggestion-box fade-up">
+      <span class="eyebrow">Suggestions & Stories</span>
+      <h2>Have an idea, or a story of your own? Tell us.</h2>
+      <p style="margin-top:14px;max-width:560px">Share suggestions for Divya Light, or tell us how you helped someone at your own personal level. With your permission, selected stories may be shared on our social media or website.</p>
+      <a class="form-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSezwytThQ42KDTrDm5gJEWc1E4nXPAoxQp4xDNZEGAtfojU_w/viewform?usp=publish-editor" target="_blank" rel="noopener">Share via Google Form</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo"><img src="logod1.png" alt="Divya Light Logo"></div>
+        <p>A community humanitarian initiative — giving time, kindness and care to people, animals and the earth.</p>
+      </div>
+      <div class="flinks">
+        <h4>Explore</h4>
+        <a href="#mission">Our Mission</a>
+        <a href="#humanity">Humanity</a>
+        <a href="#earth">Mother Earth</a>
+        <a href="#stories">Stories</a>
+      </div>
+      <div class="flinks">
+        <h4>Quick Links</h4>
+        <a href="gallery.html" style="color:var(--gold);font-weight:600;">✨ Contribution Gallery</a>
+        <a href="#contribute">Contributions</a>
+        <a href="#suggestions">Suggestions</a>
+        <a href="#" onclick="openModal();return false;">Help to Feed</a>
+      </div>
+    </div>
+    <p class="foot-disclaimer">Divya Light is not a registered NGO, certified charity or non-profit organisation. Contributions are voluntary and support community humanitarian activities only; no tax benefit or 80G deduction is offered.</p>
+    <div class="foot-bottom"><span>© 2026 Divya Light. All Rights Reserved.</span></div>
+  </div>
+</footer>
+
+<!-- FLOATING HELP & SCROLL TOP -->
+<button class="floating-help" onclick="openModal()" aria-label="Help to Feed">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3A3530" stroke-width="1.8"><path d="M20.8 8.6c0 4.4-8.8 10.4-8.8 10.4S3.2 13 3.2 8.6a4.6 4.6 0 0 1 8.8-1.8 4.6 4.6 0 0 1 8.8 1.8Z"/></svg>
+  <span class="label">Help</span>
+</button>
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3A3530" stroke-width="1.8"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<!-- MODALS -->
+<div class="modal-overlay" id="detailOverlay">
+  <div class="modal detail">
+    <button class="modal-close" onclick="closeDetail()" aria-label="Close">&times;</button>
+    <div class="icon" id="detailIcon"></div>
+    <h3 id="detailTitle"></h3>
+    <p id="detailBody" style="margin-top:10px"></p>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
+    <div class="qr-frame">
+      <img src="QRjio.png" alt="Help to Feed QR Code">
+    </div>
+    <h3>Help to Feed</h3>
+    <p>Scan this code to contribute. Divya Light is not a registered NGO — see the Contributions section for full details.</p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
